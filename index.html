@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="Main_div">
+        <div>
+            <label for="">Weight <input type="number" id="weight"></label>
+            <label for="">Hight <input type="number" id="hight"></label>
+            <label for="">Result <input type="text" id="result"></label>
+            <input type="button" value="BMI" id="BMI" class="Bmi">
+        </div>
+    </div>
+
+    <script>
+        var BmiBtn = document.getElementById('BMI');
+        BmiBtn.onclick = function () {
+            var weight = document.getElementById('weight').value;
+            var hight = document.getElementById('hight').value;
+            var result = (weight) / (hight * hight)
+            document.getElementById('result').value = result;
+        };
+
+
+    </script>
+</body>
+
+</html>
